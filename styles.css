@@ -1,0 +1,120 @@
+html,
+* {
+    font-family: "JetBrains Mono";
+}
+
+body {
+    background-color: #212121;
+}
+
+#playlistSidebar {
+    width: 30%;
+    background-color: #212121;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.songsList {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.upperContentSeperator {
+    margin-left: 5px;
+    width: 3px;
+    height: full;
+    background-color: #535353;
+}
+
+#playlistSidebar:nth-child(0) {
+    margin-top: 0
+}
+
+.playlistElement {
+    display: flex;
+    align-items: center;
+    background-color: darkgray;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 10vh;
+}
+
+.playlistCover {
+    margin: 15px;
+    max-width: 80%;
+    max-height: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.playlistInfo {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.upperContentSection {
+    display: flex;
+}
+
+.playlistContentSection {
+    margin-top: 10px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.playlistContentSection>img {
+    margin-right: 50px;
+}
+
+.playlistSong {
+    display: flex;
+    align-items: center;
+    background-color: darkgray;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 10vh;
+}
+
+.playlistSongs {
+    display: flex;
+    flex-direction: column;
+}
+
+.playlistSong>img {
+    margin: 15px;
+    max-width: 80%;
+    max-height: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.shuffleButton {
+    max-width: 5%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+.songInfo {}
+
+#searchBar>input {
+    background-image: url("blob:https://emojidb.org/b62b623f-ed28-46b4-861a-f02b824073e6");
+    width: 98%;
+    border: none;
+    border-radius: 8px;
+    height: 3vh;
+    background-color: #121212;
+}
