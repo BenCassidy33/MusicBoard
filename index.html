@@ -17,18 +17,43 @@
 </head>
 
 <body>
+    <div id="shareModalContainer">
+        <div class="shareModal">
+            <div class="shareModalContent">
+                <div>Share:</div>
+                <div id="shareUrl"></div>
+                <img src="./public/copy.svg" alt="copy link" id="copyButton">
+                <div id="closeModal">&times</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="findSongModalContainer">
+        <div id="findSongModal">
+            <h3 style="text-align: center">Find a Song</h3>
+            <div>
+                <div class="searchInputs">
+                    <label for="songSearchInput">Search Song:</label>
+                    <input type="text" id="songSearchInput">
+                </div>
+            </div>
+            <div id="similarSongs">
+            </div>
+        </div>
+    </div>
+
     <div class="upperContentSection">
         <div id="playlistSidebar">
             <div id="searchBar">
+                <img id="filterButton" src="public/filter.svg" class="filterButton">
                 <input type="text" placeholder="Search for a Song or Playlist" id="searchInput">
             </div>
         </div>
-        <div class="upperContentSeperator"></div>
+        <div id="resizeBar"></div>
 
         <div id="contentSection"></div>
     </div>
     <div id="playerControls">
-
     </div>
 </body>
 

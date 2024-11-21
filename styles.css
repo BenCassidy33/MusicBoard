@@ -1,19 +1,23 @@
 html,
 * {
     font-family: "JetBrains Mono";
+    color: white;
 }
 
 body {
-    background-color: #212121;
+    background-color: #121212;
 }
 
 #playlistSidebar {
+    display: flex;
+    flex-direction: column;
+    min-width: 30%;
     width: 30%;
     background-color: #212121;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 10px;
-    margin-right: 20px;
+    /*border-radius: 10px;*/
+    overflow: scroll;
 }
 
 .songsList {
@@ -25,11 +29,11 @@ body {
     margin-right: 20px;
 }
 
-.upperContentSeperator {
-    margin-left: 5px;
-    width: 3px;
+#resizeBar {
+    width: 7px;
     height: full;
     background-color: #535353;
+    cursor: pointer;
 }
 
 #playlistSidebar:nth-child(0) {
@@ -39,11 +43,17 @@ body {
 .playlistElement {
     display: flex;
     align-items: center;
-    background-color: darkgray;
+    background-color: #121212;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 5px;
     cursor: pointer;
     height: 10vh;
+    width: 27vw;
+}
+
+.playlistText {
+    font-size: 1vw;
+    text-overflow: ellipsis;
 }
 
 .playlistCover {
@@ -85,6 +95,7 @@ body {
     margin-top: 10px;
     cursor: pointer;
     height: 10vh;
+    background-color: #212121;
 }
 
 .playlistSongs {
@@ -102,19 +113,165 @@ body {
 }
 
 .shuffleButton {
-    max-width: 5%;
+    max-width: 3%;
+    cursor: pointer;
+}
+
+.shareButton {
+    max-width: 3%;
     cursor: pointer;
     margin-left: 10px;
 }
 
+#shareModalContainer {
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+}
 
-.songInfo {}
+.shareModal {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #212121;
+    padding: 50px 150px;
+    box-shadow: 0px 0px 12px 11px rgba(0, 0, 0, 0.7);
+}
 
-#searchBar>input {
-    background-image: url("blob:https://emojidb.org/b62b623f-ed28-46b4-861a-f02b824073e6");
-    width: 98%;
-    border: none;
-    border-radius: 8px;
-    height: 3vh;
+.shareModalContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(100px);
+}
+
+.shareModalContent>* {
+    margin: 20px;
+}
+
+#shareUrl {
+    display: flex;
+    width: 450px;
+    height: 50px;
     background-color: #121212;
+    border-radius: 10px;
+    justify-content: flex-start;
+    padding-left: 17px;
+    align-items: center;
+    white-space: nowrap;
+    text-align: left;
+    overflow: scroll;
+    text-overflow: ellipsis;
+}
+
+#closeModal {
+    cursor: pointer;
+    font-size: 36px;
+}
+
+#copyButton {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.addButton {
+    max-width: 3%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.likeContainer {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.likeButton {
+    max-width: 3%;
+}
+
+.playlistInteractions {
+    align-items: space-between;
+    width: full;
+    border: 1px solid white;
+}
+
+#findSongModalContainer {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#findSongModal {
+    display: flex;
+    flex-direction: column;
+    background-color: #212121;
+    padding: 50px;
+    display: flex;
+    border-radius: 5px;
+    border: 3px solid white;
+}
+
+
+.searchInputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchInputs:nth-child(1) {
+    margin-right: 3px;
+}
+
+.resultEntry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #eae8e4;
+}
+
+.addSongButton {
+    height: 3%;
+    width: 3%;
+}
+
+#searchInput {
+    margin: 5px;
+    margin-left: 14px;
+    margin-top: 10px;
+    /*margin-right: 15px;*/
+    width: 27vw;
+    border: none;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+}
+
+#searchBar {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+    border-radius: 999999px;
+    padding: 10px;
+    height: 5vh;
+    /*border: 1px solid white;*/
+    width: 92%;
+    padding: 0;
+}
+
+.filterButton {
+    cursor: pointer;
+    max-width: 5%;
 }
